@@ -10,7 +10,7 @@ import { ProductSort } from "@/components/product-sort"
 import { seedSanityData } from "@/lib/seed"
 
 interface Props { 
-  
+
 }
 
 export default async function Page() {
@@ -21,6 +21,7 @@ export default async function Page() {
     _createdAt,
     name,
     sku,
+    images,
     currency,
     price,
     description,
