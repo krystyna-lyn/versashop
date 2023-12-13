@@ -38,7 +38,7 @@ export const inventory: InventoryProduct[] = [
     sizes: ["one-size"],
     categories: ["bags"],
     colors: ["brown"],
-    currency: "USD",
+    currency: "EUR",
   },
   {
     id: "8d1a33a5-5650-4bd7-bb70-ba4670090700",
@@ -56,7 +56,7 @@ export const inventory: InventoryProduct[] = [
     sizes: ["one-size"],
     categories: ["bags"],
     colors: ["blue"],
-    currency: "USD",
+    currency: "EUR",
   },
   {
     id: "e882fe48-253c-40fb-8155-51b47b063c1a",
@@ -72,12 +72,12 @@ export const inventory: InventoryProduct[] = [
     sizes: ["s", "m", "l", "xl"],
     categories: ["belts"],
     colors: ["brown"],
-    currency: "USD",
+    currency: "EUR",
   },
   {
     id: "6853a582-fc95-44af-9dac-dffbc694b47d",
     sku: "woolblend_suit_belt_1",
-    name: "Wool-Blend Suit Belt",
+    name: "Blend Suit Belt",
     description: `This handsome belt will pull together any outfit. The strong materials will take on your wear patterns and look even better over time.`,
     price: 5599,
     image:
@@ -88,7 +88,7 @@ export const inventory: InventoryProduct[] = [
     sizes: ["s", "m", "l", "xl"],
     categories: ["belts"],
     colors: ["black"],
-    currency: "USD",
+    currency: "EUR",
   },
   {
     id: "b5980fb9-142b-4e0b-9683-daac07827e0a",
@@ -105,7 +105,7 @@ export const inventory: InventoryProduct[] = [
     sizes: ["one-size"],
     categories: ["scarves"],
     colors: ["green"],
-    currency: "USD",
+    currency: "EUR",
   },
   {
     id: "743b3855-6487-4d52-80fc-bcb8ca4fa74b",
@@ -121,7 +121,7 @@ export const inventory: InventoryProduct[] = [
     sizes: ["s", "m", "l", "xl"],
     categories: ["gloves"],
     colors: ["brown"],
-    currency: "USD",
+    currency: "EUR",
   },
   {
     id: "83ea928a-d834-4c6d-a588-4c93ec2de3c0",
@@ -137,7 +137,7 @@ export const inventory: InventoryProduct[] = [
     sizes: ["s", "m", "l", "xl"],
     categories: ["gloves"],
     colors: ["black"],
-    currency: "USD",
+    currency: "EUR",
   },
   {
     id: "c5ef468d-d49e-4aa5-be5b-41f34af40b19",
@@ -154,7 +154,7 @@ export const inventory: InventoryProduct[] = [
     sizes: ["one-size"],
     categories: ["sunglasses"],
     colors: ["yellow"],
-    currency: "USD",
+    currency: "EUR",
   },
   {
     id: "dd27c79d-97c3-47bb-9172-4ea74b096f6f",
@@ -170,6 +170,22 @@ export const inventory: InventoryProduct[] = [
     sizes: ["one-size"],
     categories: ["sunglasses"],
     colors: ["black"],
-    currency: "USD",
+    currency: "EUR",
+  },
+  {
+    id: "5d99fe76-4f09-4273-9e8b-2304f2403dae",
+    sku: "black_sunglasses",
+    name: "Black Sunglasses",
+    description: `Our latest collection of handcrafted sunglasses features details like UV-protective lenses in shades specifically chosen to complement each frame, and all at a price that won't break the bank. We made these sunglasses with vintage-inspired acetate frames and a keyhole bridge.`,
+    price: 6000,
+    image:
+      "https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/dock-sunglasses-1.jpg",
+    images: [
+      "https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/dock-sunglasses-1.jpg",
+    ],
+    sizes: ["one-size"],
+    categories: ["sunglasses"],
+    colors: ["black"],
+    currency: "EUR",
   },
 ]
