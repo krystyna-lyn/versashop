@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { MainNav } from "@/components/main-nav"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { useShoppingCart } from "use-shopping-cart"
 
 
 export function SiteHeader() {
@@ -15,6 +16,9 @@ export function SiteHeader() {
   const pathname = usePathname();
   const router = useRouter();
   const searchParams = useSearchParams();
+
+  const {cartCount} = useShoppingCart();
+
   const defaultSearchQuery = searchParams.get('search') ?? "";
 
   function onSubmit(event: React.SyntheticEvent<HTMLFormElement>) {
@@ -50,7 +54,7 @@ export function SiteHeader() {
           <Link href="/cart">
             <Button size="sm" variant="ghost">
               <ShoppingBag className="h-5 w-5" />
-              <span className="ml-2 text-sm font-bold">0</span>
+              <span className="ml-2 text-sm font-bold">{cartCount}</span>
               <span className="sr-only">Cart</span>
             </Button>
           </Link>

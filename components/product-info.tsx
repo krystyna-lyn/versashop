@@ -14,11 +14,33 @@ interface Props {
   product: SanityProduct
 }
 
-export function ProductInfo({product}:Props) {
+export function ProductInfo({ product }: Props) {
 
-  const [selectedSize, setSelectedSize] = useState(product.sizes[0])
+  const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
+  const { addItem, incrementItem, cartDetails } = useShoppingCart();
+  const isInCart = !!cartDetails?.[product._id];
+  const { toast } = useToast();
+
   function addToCart() {
-
+    const item = {
+      ...product,
+      product_data: {
+        size: selectedSize
+      }
+    }
+    isInCart ? incrementItem(item._id) : addItem(item)
+    toast({
+      title: `${item.name}(${getSizeName(selectedSize)})`,
+      description: 'Product added to cart',
+      action: (
+        <Link href="/cart">
+          <Button variant="link" className="gap-x-5 whitespace-nowrap">
+            <span>Open cart</span>
+            <ArrowRight className="h-5 w-5" />
+          </Button>
+        </Link>
+      )
+    })
   }
 
   return (
@@ -27,8 +49,10 @@ export function ProductInfo({product}:Props) {
 
       <div className="mt-3">
         <h2 className="sr-only">Product information</h2>
-        <p className="text-3xl tracking-tight">{formatCurrencyString({value: product.price, 
-        currency: product.currency})}</p>
+        <p className="text-3xl tracking-tight">{formatCurrencyString({
+          value: product.price,
+          currency: product.currency
+        })}</p>
       </div>
 
       <div className="mt-6">
@@ -41,11 +65,11 @@ export function ProductInfo({product}:Props) {
           Size: <strong>{getSizeName(product.sizes[0])}</strong>
         </p>
         {product.sizes.map((size) => (
-          <Button onClick={()=>setSelectedSize(size)} 
-          key={size} 
-          variant={selectedSize === size ? "default" : "outline"} 
-          className="mr-2 mt-4">
-           {getSizeName(size)}
+          <Button onClick={() => setSelectedSize(size)}
+            key={size}
+            variant={selectedSize === size ? "default" : "outline"}
+            className="mr-2 mt-4">
+            {getSizeName(size)}
           </Button>
         ))}
       </div>
