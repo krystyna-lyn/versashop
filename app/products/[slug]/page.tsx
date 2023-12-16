@@ -29,7 +29,7 @@ export default async function Page({ params }: Props) {
     "slug": slug.current
   }`)
 
-  console.log(product)
+  //console.log(product)
 
 
 

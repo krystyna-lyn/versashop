@@ -11,7 +11,7 @@ interface Props {
   product: SanityProduct
 }
 
-export function ProductGallery({product}:Props) {
+export function ProductGallery({ product }: Props) {
 
   const [selectedImage, setSelectedImage] = useState(0)
   return (
@@ -22,9 +22,9 @@ export function ProductGallery({product}:Props) {
           {product.images.map((image, index) => (
             <div
               key={image._key as string}
-              onClick={()=> selectedImage(index)}
+              onClick={() => setSelectedImage(index)}
               className="relative flex h-24 cursor-pointer items-center justify-center rounded-md bg-white text-sm font-medium uppercase hover:bg-gray-50"
-             >
+            >
 
               <span className="absolute inset-0 overflow-hidden rounded-md">
                 <Image
@@ -37,10 +37,10 @@ export function ProductGallery({product}:Props) {
                   blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(200, 200))}`}
                 />
               </span>
-              {/* <span
-                  className="pointer-events-none absolute inset-0 rounded-md ring-4 ring-indigo-500 ring-offset-2"
-                  aria-hidden="true"
-                /> */}
+              {index === selectedImage && <span
+                className="pointer-events-none absolute inset-0 rounded-md ring-4 ring-indigo-500 ring-offset-2"
+                aria-hidden="true"
+              />}
             </div>
           ))}
         </ul>
@@ -56,7 +56,7 @@ export function ProductGallery({product}:Props) {
           height={750}
           className="h-full w-full border-2 border-gray-200 object-cover object-center shadow-sm dark:border-gray-800 sm:rounded-lg"
           placeholder="blur"
-          blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(200, 200))}`}
+          blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(600, 750))}`}
         />
       </div>
     </div>

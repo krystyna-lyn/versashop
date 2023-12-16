@@ -172,20 +172,5 @@ export const inventory: InventoryProduct[] = [
     colors: ["black"],
     currency: "EUR",
   },
-  {
-    id: "5d99fe76-4f09-4273-9e8b-2304f2403dae",
-    sku: "black_sunglasses",
-    name: "Black Sunglasses",
-    description: `Our latest collection of handcrafted sunglasses features details like UV-protective lenses in shades specifically chosen to complement each frame, and all at a price that won't break the bank. We made these sunglasses with vintage-inspired acetate frames and a keyhole bridge.`,
-    price: 6000,
-    image:
-      "https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/dock-sunglasses-1.jpg",
-    images: [
-      "https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/dock-sunglasses-1.jpg",
-    ],
-    sizes: ["one-size"],
-    categories: ["sunglasses"],
-    colors: ["black"],
-    currency: "EUR",
-  },
+  
 ]
