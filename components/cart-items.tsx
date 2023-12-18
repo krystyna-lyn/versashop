@@ -20,14 +20,13 @@ export function CartItems() {
   const { toast } = useToast()
 
   function removeCartItem(product: Product) {
-    removeCartItem(product._id)
-    toast(
-      {
-        title: `${product.name} removed`,
-        description: `This product removed from cart`,
-        variant: "destructive"
-      }
-    )
+    removeItem(product._id)
+    console.log(product._id)
+    toast({
+      title: `${product.name} removed`,
+      description: `This product removed from cart`,
+      variant: "destructive"
+    })
   }
 
   if (cartItems.length === 0) return <CartItemsEmpty />
